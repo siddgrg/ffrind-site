@@ -2,12 +2,18 @@ body {
     background-color: $home_bg_colour;
 }
 
-
 .home {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 2rem;
+
     h1 {
         margin-top: 2rem;
         margin-bottom: 1rem;
-        color: #fff;
+        color: #000;
     }
     
     .grid {
@@ -15,19 +21,19 @@ body {
     }
 
     .btn-contact {
-        border-color: #fff;
-        color: #fff;
+        border-color: #000;
+        color: #000;
 
         #contact-arrow {
-            fill: #fff;
+            fill: #000;
         }
 
         &:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: #000;
+            color: #fff;
 
             #contact-arrow {
-                fill: #000;
+                fill: #fff;
             }
         }
     }
@@ -38,16 +44,24 @@ body {
 }
 
 #bg-vector {
+    display: block;
     position: absolute;
-    transform: translateY(-420px) translateX(-270px);
-    // top: -420px;
-    // left: -270px;
+    top: -830px;
+    left: -340px;
     z-index: -10;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
+
     .home {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 0 0 2rem;
+
         h1 {
             margin-top: 0;
             color: #000;
@@ -56,24 +70,6 @@ body {
         .grid {
             grid-template-columns: repeat(2, 1fr);
         }
-
-        .btn-contact {
-            border-color: #000;
-            color: #000;
-    
-            #contact-arrow {
-                fill: #000;
-            }
-    
-            &:hover {
-                background-color: #000;
-                color: #fff;
-    
-                #contact-arrow {
-                    fill: #fff;
-                }
-            }
-        }
     }
 
     #phone-mock {
@@ -81,8 +77,14 @@ body {
     }
 
     #bg-vector {
-        transform: translateY(-420px) translateX(40vw);
-        // left: 40vw;
+        top: -410px;
+        left: 30vw;
     }
-    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 769px) {
+    #bg-vector {
+        left: 40vw;
+    }
 }

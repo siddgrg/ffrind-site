@@ -2,7 +2,7 @@ import * as React from 'react';
 
 const Home = () => {
     return (
-        <div className="home">
+        <div className="home flex align-items-center">
             <svg id="bg-vector" aria-labelledby="title" role="img" width="1182" height="917" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <title lang="en" id="bg-vectorTitle">Background decorative vector</title>
                 <path d="M176 464.977c-14.4-94-87.3333-137.167-122-147 653-721 1601 196.5 852 501.5-749 305.003-712-237-730-354.5z" fill="#2B4D5B" />
