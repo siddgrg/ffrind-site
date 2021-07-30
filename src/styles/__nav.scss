@@ -1,7 +1,109 @@
-nav {
+.nav-bar {
     margin: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: none;
+    align-items: center;
+
+    .nav-link {
+        font-size: 0.75rem;
+        letter-spacing: 0.08rem;
+
+        &:not(:first-of-type) {
+            margin-left: 3.5rem;
+        }
+
+        &:hover {
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+        }
+    }
+}
+
+.nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+
+    #burger-menu-svg {
+        align-self: flex-end;
+    }
+    
+    .nav-links-mobile-main {
+        position: absolute;
+        top: 101px;
+        left: 0;
+        width: 100%;
+        background-color: $bg_colour;
+        border-bottom: 1px dotted #000;
+        
+        .nav-link {
+            display: block;
+            padding: 1.5rem 0;
+            border-top: 1px dotted #000;
+            text-align: center;
+        }
+    }
 }
 
 #logo-nav {
     width: 60px;
+}
+
+#burger-menu-svg {
+    fill: #000;
+    width: 25px;
+    cursor: pointer;
+}
+
+.home-bg {
+    #logo-nav {
+        display: none;
+    }
+
+    .nav-bar {
+        width: 100%;
+    }
+
+    .nav-links {
+        .nav-link {
+            color: #fff;
+        }
+    }
+
+    .nav-links-mobile-main {
+        top: 72px;
+        background-color: $main_colour;
+        border-bottom-color: #fff;
+
+        .nav-link {
+            color: #fff;
+            border-top-color: #fff;
+        }
+    }
+
+    #burger-menu-svg {
+        fill: #fff;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .home-bg {
+    
+        .nav-bar {
+            justify-content: center;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-links-mobile {
+        display: none;
+    }
 }

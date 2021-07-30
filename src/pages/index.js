@@ -1,17 +1,21 @@
-import * as React from "react"
+import React, { useEffect } from "react";
+import LogoSvg from "../components/logo-svg";
 import NavBar from "../components/nav";
-import Home from "../components/home";
 
-// markup
 const IndexPage = () => {
+
+  useEffect(() => {
+    document.body.classList.add('home-bg');
+
+    return () => {
+      document.body.classList.remove('home-bg');
+    }
+  })
+
   return (
-    <div className="cover-page-layout">
-      <header>
-        <NavBar />
-      </header>
-      <main>
-        <Home />
-      </main>
+    <div className="container home-layout flex">
+      <NavBar />
+      <LogoSvg id="logo-home" />
     </div>
   )
 }

@@ -1,0 +1,67 @@
+button {
+    appearance: none;
+    padding: 0.4rem 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    letter-spacing: 0.08rem;
+    width: max-content;
+    transition: 0.1s;
+
+    &.btn-contact {
+        border-color: #000;
+    }
+
+    &.btn-submit {
+        border-color: $accent_two_colour;
+        color: $accent_two_colour;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &.btn-contact {
+            background-color: #000;
+            color: #fff;
+        }
+
+        &.btn-submit {
+            background-color: $accent_two_colour;
+            color: #fff;
+        }
+
+        #contact-arrow {
+            fill: $bg_colour;
+        }
+    }
+
+    #contact-arrow {
+        width: 20px;
+        height: 8px;
+        fill: #000;
+        margin-left: 0.5rem;
+        transition: inherit;
+    }
+}
+
+.home-bg {
+    .btn-contact {
+        border-color: #fff;
+        color: #fff;
+
+        &:hover {
+            background-color: #fff;
+            color: #000;
+
+            #contact-arrow {
+                fill: #000;
+            }
+        }
+
+        #contact-arrow {
+            fill: #fff;
+            transition: inherit;
+        }
+    }
+}

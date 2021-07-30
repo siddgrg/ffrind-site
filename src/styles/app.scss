@@ -1,6 +1,10 @@
 @import '__variables';
 @import '__nav';
+@import '__features';
+@import '__contact';
+@import '__buttons';
 @import '__home';
+@import '__helper';
 
 * {
     box-sizing: border-box;
@@ -14,6 +18,7 @@
 
 body {
     font-family: $body_font;
+    background-color: $bg_colour;
 }
 
 h1,
@@ -26,73 +31,30 @@ h6 {
     letter-spacing: 0.08rem;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+    }
+}
+
+.container {
+    min-height: 100%;
+    min-width: 320px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .cover-page-layout {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    min-height: 100%;
-    min-width: 320px;
-    max-width: 1440px;
-    padding: 0 2rem;
     overflow-x: hidden;
-    margin: 0 auto;
-}
-
-// #bg-vector {
-//     display: none;
-// }
-
-.grid {
-    display: grid;
-}
-
-// Might need moving
-button {
-    appearance: none;
-    padding: 0.4rem 1rem;
-    border: 1px #000 solid;
-    border-radius: 3px;
-    background-color: rgba(0,0,0,0);
-    letter-spacing: 0.08rem;
-    width: max-content;
-    transition: 0.1s;
-
-    &:hover {
-
-        &.btn-contact {
-            background-color: #000;
-            color: #fff;
-        }
-
-        #contact-arrow {
-            fill: $home_bg_colour;
-        }
-    }
-
-    #contact-arrow {
-        width: 20px;
-        height: 8px;
-        fill: #000;
-        margin-left: 0.5rem;
-        transition: inherit;
-    }
-}
-
-.flex {
-    display: flex;
-
-    &-column {
-        flex-direction: column;
-    }
-}
-
-.justify-content-center {
-    justify-content: center;
-}
-
-.align-items-center {
-    align-items: center;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
